@@ -6,11 +6,11 @@ import { NavbarSearch } from "./NavbarSearch";
 import { NavbarSocialLinks } from "./NavbarSocialLinks";
 
 export const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-      setIsOpen(!isOpen);
-    };
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <nav className="bg-white shadow dark:bg-gray-800">
@@ -19,13 +19,12 @@ export const Navbar = () => {
           <div className="flex items-center justify-between">
             <NavbarLogo />
             <div className="flex lg:hidden">
-              <NavbarMenuToggle isOpen={isOpen} toggleMenu={toggleMenu}/>
+              <NavbarMenuToggle isOpen={isOpen} toggleMenu={toggleMenu} />
             </div>
           </div>
-
           <NavbarLinks isOpen={isOpen} />
-          <NavbarSearch/>
-          <NavbarSocialLinks/>
+          <NavbarSearch />
+          <NavbarSocialLinks />
         </div>
       </div>
     </nav>
