@@ -13,7 +13,7 @@ export const Home = () => {
         <Button children={"Prueba"} name={"blanco"} />
       </section>
       <div className="w-6/12">
-        <Card />
+       
       </div>
     </>
   );
