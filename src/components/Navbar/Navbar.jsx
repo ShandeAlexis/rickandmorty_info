@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavbarLogo } from "./NavbarLogo";
 import { NavbarMenuToggle } from "./NavbarMenuToggle";
 import { NavbarLinks } from "./NavbarLinks";
-import { NavbarSearch } from "./NavbarSearch";
 import { NavbarSocialLinks } from "./NavbarSocialLinks";
 
 export const Navbar = () => {
@@ -13,9 +12,9 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow dark:bg-gray-800">
+    <nav className="bg-black shadow dark:bg-gray-800">
       <div className="container px-6 py-4 mx-auto">
-        <div className="lg:flex lg:items-center">
+        <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex items-center justify-between">
             <NavbarLogo />
             <div className="flex lg:hidden">
@@ -23,7 +22,6 @@ export const Navbar = () => {
             </div>
           </div>
           <NavbarLinks isOpen={isOpen} />
-          <NavbarSearch />
           <NavbarSocialLinks />
         </div>
       </div>

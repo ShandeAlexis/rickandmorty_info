@@ -1,16 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const NavbarLogo = () => {
-
-    const url_logo= 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmRituBykJDfbBMeNym2UaQ9awQ1HgbN-JfQ&s'
+  const url_logo = "/logo_rickandmorty.webp";
 
   return (
-    <a href="#">
-    <img
-      className="w-auto h-6 sm:h-7"
-      src={url_logo}
-      alt="Logo"
-    />
-  </a>
-  )
-}
+    <Link to="/">
+      <img className="w-auto h-10 sm:h-11" src={url_logo} alt="Logo"  />
+    </Link>
+  );
+};
