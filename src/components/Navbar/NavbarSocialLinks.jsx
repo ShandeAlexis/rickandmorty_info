@@ -2,11 +2,11 @@ import React from 'react';
 
 export const NavbarSocialLinks = () => {
   return (
-    <div className="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
+    <div className="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-1">
       {/* Reddit Icon */}
       <a
         href="#"
-        className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+        className="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
         aria-label="Reddit"
       >
         <svg
@@ -22,7 +22,7 @@ export const NavbarSocialLinks = () => {
       {/* Facebook Icon */}
       <a
         href="#"
-        className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+        className="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
         aria-label="Facebook"
       >
         <svg
@@ -37,7 +37,7 @@ export const NavbarSocialLinks = () => {
       {/* GitHub Icon */}
       <a
         href="#"
-        className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+        className="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
         aria-label="Github"
       >
         <svg

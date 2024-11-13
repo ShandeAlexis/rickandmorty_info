@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const NavbarSearch = () => {
+export const NavbarSearch = ({onSearchChange}) => {
   return (
     <div className="relative mt-4 lg:mt-0 lg:ml-auto lg:mr-4">
       <span className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -21,7 +21,8 @@ export const NavbarSearch = () => {
 
       <input
         type="text"
-        className="w-full py-1 pl-10 pr-4 text-gray-700 placeholder-gray-600 bg-white border-b border-gray-600 dark:placeholder-gray-300 dark:focus:border-gray-300 lg:w-56 lg:border-transparent dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-gray-600"
+        onChange={(e) => onSearchChange(e.target.value)}
+        className="w-full py-1 pl-10 pr-4 text-gray-700 placeholder-gray-600 bg-white border-b border-gray-600 dark:placeholder-gray-300 dark:focus:border-gray-300 lg:w-full lg:border-transparent dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-gray-600"
         placeholder="Buscar..."
       />
     </div>

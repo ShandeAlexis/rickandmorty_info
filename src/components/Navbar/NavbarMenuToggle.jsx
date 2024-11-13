@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export const NavbarMenuToggle = ({ isOpen, toggleMenu }) => {
-  
-  
-    return (
+  return (
     <button
       type="button"
       className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none"
@@ -34,5 +32,5 @@ export const NavbarMenuToggle = ({ isOpen, toggleMenu }) => {
         </svg>
       )}
     </button>
-  )
-}
+  );
+};
