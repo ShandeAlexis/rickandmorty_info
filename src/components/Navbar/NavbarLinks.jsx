@@ -8,7 +8,7 @@ export const NavbarLinks = ({ isOpen }) => {
         isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
       } overflow-hidden transition-all duration-300 ease-in-out bg-black dark:bg-gray-800 lg:mt-0 lg:p-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:max-h-full lg:flex lg:items-center lg:justify-between`}
     >
-      <div className="flex flex-col text-gray-400 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
+      <div className="flex flex-col text-gray-400 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row items-center">
         {[
           { name: "Inicio", path: "/" },
           { name: "Personajes", path: "/personajes" },

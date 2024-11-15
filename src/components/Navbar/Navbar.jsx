@@ -17,7 +17,7 @@ export const Navbar = () => {
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex items-center justify-between">
             <NavbarLogo />
-            <div className="flex lg:hidden">
+            <div className="flex lg:hidden ">
               <NavbarMenuToggle isOpen={isOpen} toggleMenu={toggleMenu} />
             </div>
           </div>

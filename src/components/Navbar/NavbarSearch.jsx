@@ -2,7 +2,7 @@ import React from 'react';
 
 export const NavbarSearch = ({onSearchChange}) => {
   return (
-    <div className="relative mt-4 lg:mt-0 lg:ml-auto lg:mr-4">
+    <div className="relative mt-4 lg:mt-0 lg:ml-auto lg:mr-0">
       <span className="absolute inset-y-0 left-0 flex items-center pl-3">
         <svg
           className="w-4 h-4 text-gray-600 dark:text-gray-300"
