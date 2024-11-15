@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container px-6 py-8 mx-auto">
         <div className="flex flex-col items-center sm:flex-row sm:justify-around">
           <p className="text-sm text-white">
-            © Copyright {añoActual}. Todos los derechos reservados.
+            © Copyright {añoActual}. Hecho por Alexis Diaz.
           </p>
 
           <div className="flex mt-3 -mx-2 sm:mt-0">

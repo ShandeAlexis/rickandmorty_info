@@ -1,7 +1,7 @@
 import React from "react";
 
-export const Modal = ({ personaje, onClose }) => {
-  const fechaCreacion = new Date(personaje.created).toLocaleDateString(
+export const ModalSinImagen = ({ objeto, onClose }) => {
+  const fechaCreacion = new Date(objeto.created).toLocaleDateString(
     "es-ES",
     {
       year: "numeric",
@@ -22,33 +22,28 @@ export const Modal = ({ personaje, onClose }) => {
             <div className="grid grid-cols-1">
               <div className=" personajesxd mt-4 mx-auto bg-gray-900 max-w-lg">
                 <div className="flex flex-col items-center p-6">
-                  <img
-                    src={personaje.image}
-                    className="flex-shrink-0 object-cover object-center w-40 h-40 -mb-8 mx-auto rounded-full shadow-xl"
-                    alt={personaje.name}
-                  />
                   <p className="mt-11 text-2xl font-semibold leading-none text-white tracking-tighter lg:text-3xl">
-                    {personaje.name}
+                    {objeto.name}
                   </p>
                   <div className="mt-3 text-base leading-relaxed text-center text-gray-200">
                     <ul className="space-y-2">
                       <li>
                         <span className="font-semibold">Origen:</span>{" "}
-                        {personaje.origin.name}
+                        {objeto.origin.name}
                       </li>
                       <li>
                         <span className="font-semibold">Estado:</span>{" "}
-                        {personaje.status}
+                        {objeto.status}
                       </li>
                       <li>
                         <span className="font-semibold">
                           Cantidad de episodios:
                         </span>{" "}
-                        {personaje.episode.length}
+                        {objeto.episode.length}
                       </li>
                       <li>
                         <span className="font-semibold">Ubicación:</span>{" "}
-                        {personaje.location.name || "Desconocido"}
+                        {objeto.location.name || "Desconocido"}
                       </li>
                       <li>
                         <span className="font-semibold">Creado:</span>{" "}

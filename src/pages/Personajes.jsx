@@ -1,30 +1,38 @@
 import React, { useEffect, useState } from "react";
-import { apiService } from "../services/rickandmortyService";
 import { Modal } from "../components/ui/Modal";
 import { NavbarSearch } from "../components/Navbar/NavbarSearch";
 import Footer from "../components/Footer/Footer";
 import "../styles/personajes.css";
 import Title from "../components/ui/Title";
 import Card from "../components/ui/Card";
+import Subtitle from "../components/ui/SubTitle";
+import { personajesRickAndMorty } from "../services/personajes";
+import Pagination from "../components/Pagination/Pagination";
 
 export const Personajes = () => {
   const [personajes, setPersonajes] = useState([]);
   const [error, setError] = useState(null);
   const [selectedPersonaje, setSelectedPersonaje] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [personajesContado, setPersonajesContada] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await apiService.get("character");
-        setPersonajes(data);
+        const data = await personajesRickAndMorty.getPersonajes(page);
+        setPersonajes(data.results);
+        setTotalPages(data.info.pages);
+        setPersonajesContada(data.info.count);
+        console.log(data.info.count);
       } catch (error) {
         setError(error.message);
       }
     };
 
     fetchData();
-  }, []);
+  }, [page]);
 
   const openModal = (personaje) => {
     setSelectedPersonaje(personaje);
@@ -33,6 +41,10 @@ export const Personajes = () => {
   const closeModal = () => {
     setSelectedPersonaje(null);
   };
+
+  const handleNextPage = () => setPage((prevPage) => prevPage + 1);
+  const handlePreviousPage = () =>
+    setPage((prevPage) => Math.max(prevPage - 1, 1));
 
   const filteredPersonajes = personajes.filter((personaje) =>
     personaje.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -46,7 +58,8 @@ export const Personajes = () => {
     <>
       <section className="personajes flex items-center justify-center min-h-screen  p-4">
         <main className="container text-center p-6 bg-black rounded-lg shadow-lg">
-          <Title children={"Personajes de rick and morty"}></Title>
+          <Title children={`Rick and Morty`}></Title>
+          <Subtitle children={`${personajesContado} personajes`} />
 
           <NavbarSearch onSearchChange={(value) => setSearchTerm(value)} />
 
@@ -63,6 +76,12 @@ export const Personajes = () => {
               <p className="text-white">No se encontraron personajes.</p>
             )}
           </div>
+          <Pagination
+            page={page}
+            totalPages={totalPages}
+            onNext={handleNextPage}
+            onPrevious={handlePreviousPage}
+          />
         </main>
 
         {selectedPersonaje && (
