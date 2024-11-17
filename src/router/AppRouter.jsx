@@ -5,6 +5,7 @@ import { Home } from '../pages/Home';
 import { Personajes } from '../pages/Personajes';
 import { Navbar } from '../components/Navbar/Navbar';
 import Capitulos from '../pages/Capitulos';
+import Ubicaciones from '../pages/Ubicaciones';
 
 
 const AppRouter = () => {
@@ -15,6 +16,7 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/personajes" element={<Personajes />} />
         <Route path="/capitulos" element={<Capitulos />} />
+        <Route path="/ubicaciones" element={<Ubicaciones />} />
 
       
       </Routes>

@@ -13,7 +13,7 @@ export const NavbarLinks = ({ isOpen }) => {
           { name: "Inicio", path: "/" },
           { name: "Personajes", path: "/personajes" },
           { name: "Capítulos", path: "/capitulos" },
-          { name: "Contáctanos", path: "/contacto" },
+          { name: "Ubicaciones", path: "/ubicaciones" },
           { name: "Test", path: "/test" },
         ].map((link) => (
           <Link
