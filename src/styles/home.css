@@ -5,3 +5,37 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.fondocuadros{
+    background-image: url('https://i.blogs.es/669147/ram-s6-key--rt-1920x1080/1366_2000.jpeg');
+    background-size: cover;
+  
+}
+
+.fondo1{
+    background-image: url('https://www.justwatch.com/images/backdrop/8580211/s640/rick-and-morty.%7Bformat%7D');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fondo1{
+    background-image: url('https://www.justwatch.com/images/backdrop/8580211/s640/rick-and-morty.%7Bformat%7D');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fondo2{
+    background-image: url('https://i.pinimg.com/550x/f7/35/d4/f735d4e455fca64f87fe154c341aaf40.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fondo3{
+    background-image: url('https://i.redd.it/28f8l9z7c9a81.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

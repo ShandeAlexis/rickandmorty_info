@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="flex mt-3 -mx-2 sm:mt-0">
             {/* Facebook Icon */}
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/Alexis.RD.0/"
               target="_blank"
               rel="noopener noreferrer"
               className="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
@@ -31,7 +31,7 @@ export default function Footer() {
 
             {/* Instagram Icon */}
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/aleeexisdiaz/"
               target="_blank"
               rel="noopener noreferrer"
               className="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
@@ -49,7 +49,7 @@ export default function Footer() {
 
             {/* LinkedIn Icon */}
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/alexis-diaz-rivera-767b2325a"
               target="_blank"
               rel="noopener noreferrer"
               className="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"

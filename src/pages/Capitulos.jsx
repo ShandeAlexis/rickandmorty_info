@@ -5,11 +5,15 @@ import { capitulosRickAndMorty } from '../services/capitulos';
 import Subtitle from '../components/ui/SubTitle';
 import CardSinImagen from '../components/ui/CardSinImagen';
 import Pagination from '../components/Pagination/Pagination';
+import { Modal } from '../components/ui/Modal';
+import { ModalSinImagen } from '../components/ui/ModalSinImagen';
 
 export default function Capitulos() {
 
   const [capitulos, setCapitulos] = useState([]);
   const [capitulosContando, setCapitulosContando] = useState(1);
+  const [selectedCapitulo, setSelectedCapitulo] = useState(null);
+
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [error , setError] = useState(null);
@@ -32,8 +36,13 @@ export default function Capitulos() {
     fetchData();
   },[page]);
 
+ const openModal = (capitulo) =>{
+    setSelectedCapitulo(capitulo);
+ }
 
-
+ const closeModal = () => {
+  setSelectedCapitulo(null); 
+}
 
   const handleNextPage = () => setPage((prevPage) => prevPage + 1);
   const handlePreviousPage = () =>
@@ -56,7 +65,7 @@ export default function Capitulos() {
           <CardSinImagen 
            key={capitulo.id}
            objeto={capitulo}
-        
+           onClick={openModal}
           />
         ))}
       </div>
@@ -67,7 +76,10 @@ export default function Capitulos() {
             onNext={handleNextPage}
             onPrevious={handlePreviousPage}
       />
-      
+
+        {selectedCapitulo && (
+          <ModalSinImagen objeto={selectedCapitulo} onClose={closeModal} />
+        )}
     </CapitulosLayout>
   )
 }
