@@ -5,7 +5,7 @@ export const NavbarSocialLinks = () => {
     <div className="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-1">
       {/* Reddit Icon */}
       <a
-        href="#"
+        href="https://www.reddit.com/r/rickandmorty/"
         className="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
         aria-label="Reddit"
       >
@@ -21,7 +21,7 @@ export const NavbarSocialLinks = () => {
 
       {/* Facebook Icon */}
       <a
-        href="#"
+        href="https://www.facebook.com/RickandMorty/"
         className="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
         aria-label="Facebook"
       >
@@ -36,7 +36,7 @@ export const NavbarSocialLinks = () => {
       </a>
       {/* GitHub Icon */}
       <a
-        href="#"
+        href="https://github.com/ShandeAlexis/rickandmorty_info"
         className="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
         aria-label="Github"
       >
